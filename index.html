@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>The Nest</title>
+    <style>
+        body {
+            background-color: #454545;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            /* center the tiles horizontally */
+            align-items: center;
+            /* center the tiles vertically */
+            max-width: 1080px;
+            min-width: 720px;
+            margin: 0 auto;
+        }
+
+        .tile {
+            flex: 1 1 auto;
+            max-width: 225px;
+            display: inline-block;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+            margin: 8px;
+        }
+
+        .tile:hover {
+            transform: scale(1.1);
+        }
+
+        .tile img {
+            display: block;
+            width: 225px;
+            height: 225px;
+            border-radius: 5px;
+        }
+
+        .tile h3 {
+            margin-top: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /*@media (min-width: 721px) and (max-width: 1920px) {
+            .tile {
+                flex-basis: calc(25% - 16px);
+            }
+        }*/
+
+        /* Media queries for responsive design */
+        /*@media (max-width: 720px) {
+            .container {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .tile {
+                flex-basis: calc(50% - 16px);
+            }
+        }/*
+
+        /*@media (max-width: 240px) {
+            .tile {
+                flex-basis: calc(50% - 16px);
+            }
+        }*/
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="tile" onclick="location.href='http://homeassistant.heron-owl.ts.net:8123'">
+            <img src="homeassistant.png" alt="Example Image">
+            <h3>Home Assistant</h3>
+        </div>
+        <div class="tile" onclick="location.href='http://ubuntu.heron-owl.ts.net:8082'">
+            <img src="owncloud.png" alt="Example Image">
+            <h3>ownCloud</h3>
+        </div>
+        <div class="tile" onclick="location.href='http://homeassistant.heron-owl.ts.net:32400'">
+            <img src="plex.jpg" alt="Example Image">
+            <h3>Plex server</h3>
+        </div>
+        <div class="tile" onclick="location.href='https://ubuntu.heron-owl.ts.net:10000'">
+            <img src="ubuntu.png" alt="Example Image">
+            <h3>Webmin</h3>
+        </div>
+        <div class="tile" onclick="location.href='https://ubuntu.heron-owl.ts.net:9443'">
+            <img src="portainer.jpg" alt="Example Image">
+            <h3>Portainer</h3>
+        </div>
+        <div class="tile" onclick="location.href='https://login.tailscale.com/admin/machines'">
+            <img src="tailscale.png" alt="Example Image">
+            <h3>Tailscale</h3>
+        </div>
+    </div>
+
+</body>
+
+</html>
